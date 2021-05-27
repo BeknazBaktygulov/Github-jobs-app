@@ -1,12 +1,28 @@
-import React from 'react'
+import React, {useReducer} from 'react'
 import axios from 'axios'
 
-function useFetchJobs(params, page) {
-    return (
-        <div>
+const ACTIONS = {
+    MAKE_REQUEST: 'make-request',
+    GET_DATA: 'get-data',
+    ERROR: 'error'
+}
+
+const reducer = (state, action) => {
+    switch(action.type) {
+        case MAKE_REQUEST:
             
-        </div>
-    )
+    }
+}
+
+function useFetchJobs(params, page) {
+    const [state, dispatch] = useReducer(reducer, { jobs: [], loading: true})
+
+    dispatch({ type: 'hello', payload: { x: 3} })
+    return {
+        jobs: [],
+        loading: false,
+        error: false,
+    }
 }
 
 export default useFetchJobs

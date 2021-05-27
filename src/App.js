@@ -10,7 +10,9 @@ function App() {
   return (
     
       <Container>
-
+        {loading && <h1>Loading ...</h1> }
+        {error && <h1>Error. Try refreshing the page</h1>}
+        <h1>{jobs.length}</h1>
       </Container>
      
   );
