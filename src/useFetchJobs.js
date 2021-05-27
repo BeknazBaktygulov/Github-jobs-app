@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 
-function useFetchJobs(params) {
+function useFetchJobs(params, page) {
     return (
         <div>
             

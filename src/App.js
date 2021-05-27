@@ -1,11 +1,18 @@
 
 import './App.css';
+import useFetchJobs from './useFetchJobs';
+import { Container } from 'react-bootstrap';
 
 function App() {
+  const {jobs, loading, error } = useFetchJobs()
+
+
   return (
-    <div className="App">
-      <h1>Hello githubers</h1>
-    </div>
+    
+      <Container>
+
+      </Container>
+     
   );
 }
 
